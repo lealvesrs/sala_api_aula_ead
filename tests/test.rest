@@ -1,0 +1,48 @@
+### GET todas as salas (não removidas)
+GET http://localhost:3000/api/salas/GetAllSalasDeAula
+Content-Type: application/json
+
+###
+
+### GET sala por ID (se não removida)
+POST http://localhost:3000/api/salas/GetSalasDeAulaByID
+Content-Type: application/json
+
+{
+  "salasdeaulaid": 1
+}
+
+###
+
+### INSERT nova sala
+POST http://localhost:3000/api/salas/InsertSalasDeAula
+Content-Type: application/json
+
+{
+  "descricao": "Sala 103",
+  "localizacao": "Bloco D",
+  "capacidade": 50
+}
+
+###
+
+### UPDATE sala existente
+POST http://localhost:3000/api/salas/UpdateSalasDeAula
+Content-Type: application/json
+
+{
+  "salasdeaulaid": 2,
+  "descricao": "Sala 102 Reformada",
+  "localizacao": "Bloco B - Andar 2",
+  "capacidade": 45
+}
+
+###
+
+### DELETE (soft delete) sala
+POST http://localhost:3000/api/salas/DeleteSalasDeAula
+Content-Type: application/json
+
+{
+  "salasdeaulaid": 3
+}
